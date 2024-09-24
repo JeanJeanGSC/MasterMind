@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="400.0" style="-fx-background-color: #6A353490;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mastermind.JeuController">
+   <children>
+      <Label layoutX="93.0" layoutY="14.0" text="MASTERMIND" textAlignment="CENTER" textFill="#6a3534">
+         <font>
+            <Font name="Yu Gothic Bold" size="30.0" />
+         </font>
+      </Label>
+      <Pane layoutX="37.0" layoutY="52.0" prefHeight="68.0" prefWidth="327.0" style="-fx-background-color: #6A3534;">
+         <children>
+            <Circle fx:id="btnOrange" fill="#ce732e" layoutX="164.0" layoutY="34.0" onMousePressed="#clickOrange" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0">
+               <effect>
+                  <InnerShadow height="25.0" offsetX="10.0" offsetY="10.0" radius="12.0" width="25.0">
+                     <color>
+                        <Color red="0.30263158679008484" green="0.18937824666500092" blue="0.030823586508631706" />
+                     </color>
+                  </InnerShadow>
+               </effect></Circle>
+            <Circle fx:id="btnGreen" fill="#338a11" layoutX="104.0" layoutY="34.0" onMousePressed="#clickGreen" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0">
+               <effect>
+                  <InnerShadow height="25.0" offsetX="10.0" offsetY="10.0" radius="12.0" width="25.0">
+                     <color>
+                        <Color red="0.02509746514260769" green="0.19736842811107635" blue="0.012792397290468216" />
+                     </color>
+                  </InnerShadow>
+               </effect></Circle>
+            <Circle fx:id="btnBlue" fill="#1711ad" layoutX="224.0" layoutY="34.0" onMousePressed="#clickBlue" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0">
+               <effect>
+                  <InnerShadow height="25.0" offsetX="10.0" offsetY="10.0" radius="12.0" width="25.0">
+                     <color>
+                        <Color red="0.01461988314986229" green="0.0694444477558136" blue="0.19736842811107635" />
+                     </color>
+                  </InnerShadow>
+               </effect></Circle>
+            <Circle fx:id="btnRed" fill="#bf1319" layoutX="44.0" layoutY="34.0" onMousePressed="#clickRed" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0">
+               <effect>
+                  <InnerShadow height="25.0" offsetX="10.0" offsetY="10.0" radius="12.0" width="25.0">
+                     <color>
+                        <Color red="0.28947368264198303" green="0.03216374292969704" blue="0.03216374292969704" />
+                     </color>
+                  </InnerShadow>
+               </effect></Circle>
+            <Circle fx:id="btnYellow" fill="#efe62d" layoutX="284.0" layoutY="34.0" onMousePressed="#clickYellow" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0">
+               <effect>
+                  <InnerShadow height="25.0" offsetX="10.0" offsetY="10.0" radius="12.0" width="25.0">
+                     <color>
+                        <Color red="0.25" green="0.23479938507080078" blue="0.021990740671753883" />
+                     </color>
+                  </InnerShadow>
+               </effect></Circle>
+         </children>
+      </Pane>
+      <GridPane alignment="BASELINE_CENTER" disable="true" layoutX="59.0" layoutY="125.0" prefHeight="500.0" prefWidth="285.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="1.0" prefHeight="1.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="1.0" prefHeight="1.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="1.0" prefHeight="1.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="1.0" prefHeight="1.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="1.0" prefHeight="1.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="1.0" prefHeight="1.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="1.0" prefHeight="1.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Circle fx:id="p11" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p12" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p13" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p14" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p21" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.rowIndex="2">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p31" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.rowIndex="4">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p41" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.rowIndex="6">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p51" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.rowIndex="8">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p71" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.rowIndex="12">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p61" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.rowIndex="10">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p81" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.rowIndex="14">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p22" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p33" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p44" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.rowIndex="6">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p53" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.rowIndex="8">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p72" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="12">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p82" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="14">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p63" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.rowIndex="10">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p74" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.rowIndex="12">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p42" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p24" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p23" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p34" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p32" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p43" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p52" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p54" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.rowIndex="8">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p73" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.rowIndex="12">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p62" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="10">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p83" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.rowIndex="14">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p64" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.rowIndex="10">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <Circle fx:id="p84" fill="#2197ff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.rowIndex="14">
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Circle>
+            <GridPane prefHeight="28.0" prefWidth="25.0" GridPane.columnIndex="4">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Circle fx:id="c12" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" />
+                  <Circle fx:id="c14" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Circle fx:id="c13" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
+                  <Circle fx:id="c11" fill="#2197ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+               </children>
+            </GridPane>
+            <GridPane prefHeight="28.0" prefWidth="25.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Circle fx:id="c22" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Circle fx:id="c24" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Circle fx:id="c23" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="2" />
+                  <Circle fx:id="c21" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <GridPane prefHeight="28.0" prefWidth="25.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Circle fx:id="c32" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" />
+                  <Circle fx:id="c34" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Circle fx:id="c33" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
+                  <Circle fx:id="c31" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+               </children>
+            </GridPane>
+            <GridPane prefHeight="28.0" prefWidth="25.0" GridPane.columnIndex="4" GridPane.rowIndex="6">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Circle fx:id="c42" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" />
+                  <Circle fx:id="c44" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Circle fx:id="c43" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
+                  <Circle fx:id="c41" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+               </children>
+            </GridPane>
+            <GridPane prefHeight="28.0" prefWidth="25.0" GridPane.columnIndex="4" GridPane.rowIndex="8">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Circle fx:id="c52" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" />
+                  <Circle fx:id="c54" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Circle fx:id="c53" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
+                  <Circle fx:id="c51" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+               </children>
+            </GridPane>
+            <GridPane prefHeight="28.0" prefWidth="25.0" GridPane.columnIndex="4" GridPane.rowIndex="12">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Circle fx:id="c72" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" />
+                  <Circle fx:id="c74" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Circle fx:id="c73" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
+                  <Circle fx:id="c71" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+               </children>
+            </GridPane>
+            <GridPane prefHeight="28.0" prefWidth="25.0" GridPane.columnIndex="4" GridPane.rowIndex="10">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Circle fx:id="c62" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" />
+                  <Circle fx:id="c64" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Circle fx:id="c63" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
+                  <Circle fx:id="c61" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+               </children>
+            </GridPane>
+            <GridPane prefHeight="28.0" prefWidth="25.0" GridPane.columnIndex="4" GridPane.rowIndex="14">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="52.0" minWidth="10.0" prefWidth="28.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="29.0" minWidth="5.0" prefWidth="29.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Circle fx:id="c82" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" />
+                  <Circle fx:id="c84" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Circle fx:id="c83" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
+                  <Circle fx:id="c81" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+               </children>
+            </GridPane>
+            <Line endX="185.0" startX="-100.0" stroke="#00000027" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Line endX="185.0" startX="-100.0" stroke="#00000026" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Line endX="185.0" startX="-100.0" stroke="#00000026" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Line endX="185.0" startX="-100.0" stroke="#00000026" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <Line endX="185.0" startX="-100.0" stroke="#00000026" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <Line endX="185.0" startX="-100.0" stroke="#00000026" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+            <Line endX="185.0" startX="-100.0" stroke="#00000026" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+         </children>
+      </GridPane>
+      <Pane layoutX="37.0" layoutY="668.0" prefHeight="68.0" prefWidth="327.0" style="-fx-background-color: #6A3534;">
+         <children>
+            <GridPane layoutX="12.0" layoutY="19.0" prefHeight="30.0" prefWidth="304.0">
+              <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Circle fx:id="rep1" fill="#1611ab00" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="rep2" fill="#1611ab00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                  <Circle fx:id="rep3" fill="#1611ab00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                  <Circle fx:id="rep4" fill="#1611ab00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <Label layoutX="94.0" layoutY="634.0" text="Combinaison Secrète:" textFill="#6a3534">
+         <font>
+            <Font name="Yu Gothic Bold" size="20.0" />
+         </font>
+      </Label>
+      <Pane fx:id="cacheCombine" layoutX="37.0" layoutY="633.0" prefHeight="103.0" prefWidth="327.0" style="-fx-background-color: #6A3534;" />
+   </children>
+</AnchorPane>
